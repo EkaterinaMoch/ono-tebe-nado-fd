@@ -339,10 +339,10 @@
 }
 
 .footer__menu-link {
+    line-height: 21px;
     text-decoration: underline;
     text-underline-offset: 4px;
     text-decoration-thickness: 1px;
-    line-height: 21px;
 }
 
 .footer__menu-link_active {
