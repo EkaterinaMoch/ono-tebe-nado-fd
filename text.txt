@@ -1,0 +1,137 @@
+1. Блоки в макете:
+    1) header
+    2) обложка (оно тебе надо)
+    3) лоты
+    4) about
+    5) footer
+
+2. Похожие элементы:
+    1) adress (header/footer)
+    2) иконка "ОНО ТЕБЕ НАДО"
+    3) оверлей (карточка в блоке "лоты" и обложка)
+    4) заголовки (h2) "лоты" и "об аукционе"
+
+3. ШРИФТЫ ЦВЕТА
+    1) ШРИФТЫ:                  ЦВЕТА:
+        Raleway regular 18         #000000 
+
+        Raleway bold 100           #FFFFFF
+        Raleway regular 22
+        Raleway medium 22
+
+        Raleway bold 40            #000000
+        Raleway bold 22            #FFFFFF
+        Raleway regular 20
+        Raleway regular 20         #000000
+
+        Raleway bold 40
+        Raleway regular 20
+
+        Raleway regular 18
+
+    2) КАРТИНКИ:
+        ДЛЯ ОФОРМЛЕНИЯ:
+             иконка (header)
+             обложка (обложка)
+             иконка (about)
+        ДЛЯ КОНТЕНТА:
+            картинки карточек (лоты)
+
+4. Странные элементы макета:
+    разделители ссылок (header)
+    круг с логотипом (about)
+    соцсети (footer)
+
+
+5. Отступы: 
+    margin:
+
+    header
+        0
+    main 
+    section class="cover"
+        180px
+    section class="lots" 24px 24px
+        120px
+    section class="about" 24px 24px
+    /main
+        180px
+    footer
+
+
+
+    padding:
+
+    header
+        93.16px 50px 95.19px
+    main 
+    section class="cover"
+        165px 50px 50px
+    section class="lots" 
+        
+    section class="about" 
+        35px 0 0 47px
+    /main
+        
+    footer
+        0 50px 82px
+
+
+6. ФОН
+    header  #FFFFFF
+        
+    main 
+    section class="cover" #000000 - изображение
+        
+    section class="lots" 
+        
+    section class="about" 
+    /main
+        
+    footer
+
+
+
+НАЧИНАЕМ ПИСАТЬ КОД:
+
+header:
+
+.header {
+  display: grid;
+  grid-template-columns: ...px ...px ...px;
+  gap: 20px;
+
+  justify-content: start;
+  align-items: center;
+
+  ИЛИ ПРОСТО: 
+  place-items: center start;
+}
+
+.item1 {
+  grid-column-start: 1;
+  grid-column-end: 2;  -- можно не указывать
+
+  или: 
+  grid-column: 1 / 2; (опять же, второе значение можно не указывать)
+}
+
+
+МОЖНО ЗАДАТЬ ДЛЯ ЭЛЕМЕНТА ОТДЕЛЬНЫЕ ЗНАЧЕНИЯ СВОЙСТВА justify-items
+
+.container {
+  justify-items: stretch;
+}
+
+.item1 {
+  justify-self: center;
+}
+(place-self СРАЗУ ДЛЯ 2Х СВОЙСТВ)
+
+
+ЧТО ПРЕДЛАГАЕТСЯ В ПРАКТИКУМЕ:
+.header {
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  align-items: center;
+}
